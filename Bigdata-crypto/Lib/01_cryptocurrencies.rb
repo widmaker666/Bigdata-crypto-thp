@@ -11,7 +11,7 @@ end
 # Création du Hash et fusion des deux tableaux money et prices
 hash = {}
 hash_fusion = money.zip(prices) #on appel le nouveau tableau hash_fusion puis = et on va appeler le premier tableau (money) puis fusionner grâce à .zip("le nom du tableau prices")
-                                #hash_fusion = hash_fusion.sort_by{|m,p| -p} #sort_by tri les deux valeur |m,p| par ordre croissant en commencant par m puis p, et ensuite le -p indique que la valeur p sera trié par ordre croissant
+                                #hash_fusion = hash_fusion.sort_by{|m,p| -p} #sort_by tri les deux valeur |m,p| par ordre croissant en commencant par m puis p, et ensuite le -p indique que la valeur p sera trié par ordre décroissant
 puts "\n ============ \n"
 # La ou les crypto qui ont la plus grosse valeur
 puts "Voici la ou les crypto qui ont la plus grosse valeur"
