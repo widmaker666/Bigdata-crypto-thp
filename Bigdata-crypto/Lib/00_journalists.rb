@@ -54,9 +54,9 @@ puts "Dernier truc de fou"
 puts "je peux te dire la répartition des elements par taille de caractère de ce dernier"
 puts "Genre, combien d'elements qui on 1 caractère, 2 , 3 etc... T'as compris ? Regarde ! "
 print ">"
-#repartition = {}
-  for handle in handles do
-    repartition[handle.length] = (repartition[handle.length] ||= 0) + 1
+repartition = {}
+  for usernames in usernames do
+    repartition[usernames.length] = (repartition[usernames.length] ||= 0) + 1
   end
   puts "Voici la répartition : "
   repartition.sort.each do |key, value|

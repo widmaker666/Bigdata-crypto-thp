@@ -11,30 +11,37 @@ end
 # Création du Hash et fusion des deux tableaux money et prices
 hash = {}
 hash_fusion = money.zip(prices) #on appel le nouveau tableau hash_fusion puis = et on va appeler le premier tableau (money) puis fusionner grâce à .zip("le nom du tableau prices")
-hash_fusion = hash_fusion.sort_by{|m,p| -p} #sort_by tri les deux valeur |m,p| par ordre croissant en commencant par m puis p, et ensuite le -p indique que la valeur p sera trié par ordre croissant
-
+                                #hash_fusion = hash_fusion.sort_by{|m,p| -p} #sort_by tri les deux valeur |m,p| par ordre croissant en commencant par m puis p, et ensuite le -p indique que la valeur p sera trié par ordre croissant
+puts "\n ============ \n"
 # La ou les crypto qui ont la plus grosse valeur
 puts "Voici la ou les crypto qui ont la plus grosse valeur"
-
-#puts hash_fusion.last (marche pour le sort_by qui permet de chercher la dernière valeur)
+                                        #puts hash_fusion.last (marche pour le sort_by qui permet de chercher la dernière valeur)
 hash_max = hash_fusion.max_by{|m,p| p}  #ensuite on veut ressortir le p qui a la plus grosse valeur associé au nom de la money 
 puts hash_max.join(" = ")
 
+puts "\n ============ \n"
 # La ou les crypto qui ont la plus petite valeur.
 puts "Voici la ou les crypto avec la plus petite valeur"
-#puts hash_fusion.first (marche pour le sort_by qui permet de chercher la premiere valeur)
+                                        #puts hash_fusion.first (marche pour le sort_by qui permet de chercher la premiere valeur)
 hash_min = hash_fusion.min_by{|m,p| p}
 puts hash_min.join(" = ")
-   
-# Les devises dont le cours est inférieur à 6000
-puts = "Les devises inférieur à 6000"
 
+puts "\n ============ \n" 
+# Les devises dont le cours est inférieur à 6000
+puts  "Les devises inférieur à 6000"
+puts ">"
 hash_6000 = hash_fusion.select {|m,p| p<6000}
 puts hash_6000.join(" / ")
 
 # La devise la plus chère parmi celles dont le cours est inférieur à 6000.
-puts = "La devise la plus chère parmi celles dont le cours est inférieur à 6000."
+puts "\n ============ \n"
+puts  "La devise la plus chère parmi celles dont le cours est inférieur à 6000."
+hash_6000sup = hash_6000.max_by{|m,p| p}
+
+puts hash_6000sup 
+
+puts "\n ============ \n"
+puts "Fin merci"
 
 
-# Execution de toutes les méthodes
 
